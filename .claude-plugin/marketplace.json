@@ -1,0 +1,15 @@
+{
+  "name": "arcadible",
+  "description": "Agent skills for making and publishing games on Arcadible.",
+  "owner": {
+    "name": "Arcadible",
+    "url": "https://arcadible.com"
+  },
+  "plugins": [
+    {
+      "name": "arcadible",
+      "description": "Make, publish, and update games on Arcadible with the arc CLI, and record their store page's screenshots and videos",
+      "source": "./"
+    }
+  ]
+}

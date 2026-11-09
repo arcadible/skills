@@ -1,0 +1,12 @@
+{
+  "name": "arcadible",
+  "version": "0.1.1",
+  "description": "Agent skills for making and publishing games on Arcadible.",
+  "author": {
+    "name": "Arcadible",
+    "url": "https://arcadible.com"
+  },
+  "homepage": "https://developer.arcadible.com",
+  "repository": "https://github.com/arcadible/skills",
+  "license": "MIT"
+}
