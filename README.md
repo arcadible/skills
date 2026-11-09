@@ -39,6 +39,16 @@ In Claude Code, you can invoke the skill with `/arcadible:arcadible`.
 
 [`scripts/record.mjs`](skills/arcadible/scripts/record.mjs) records a game in headless Chromium from [`arc serve`](https://developer.arcadible.com/references/arcadible-cli/arc-serve.md)'s Game only address, stepping its clock a frame at a time, so the video is smooth on any machine and the same every run. It needs Node 22 or later, and Playwright and `@ffmpeg-installer/ffmpeg` where it's run (`npm install --no-save playwright @ffmpeg-installer/ffmpeg`, then `npx playwright install chromium`). Its options are in its header and in the skill.
 
+## Versions
+
+Each release is a commit on `main` with its own tag, such as `v1.0.0`, and `v1` follows the latest 1.x release, as GitHub Actions' tags do. Link or fetch `v1` to stay current, or a version's tag for fixed files:
+
+```text
+https://raw.githubusercontent.com/arcadible/skills/v1/skills/arcadible/SKILL.md
+```
+
+Within `v1`, `record.mjs`'s options and a drive module's `setup` and `frame` keep working; a change that breaks them is 2.0.0, with `v2`.
+
 ## License
 
 [MIT](LICENSE).

@@ -90,6 +90,11 @@ It steps the game's clock by hand, one video frame at a time, so a recording is 
 slowly the machine renders, WebGL in software included, and the same on every run. Frames go
 straight to ffmpeg, so memory stays flat. Setting it up takes longer than recording.
 
+`<skill>` is this skill's folder. Without the skill installed, download the script from its `v1`
+release with `curl`, which keeps it exact, rather than a fetch tool, which may summarize it:
+`curl -fsSLO https://raw.githubusercontent.com/arcadible/skills/v1/skills/arcadible/scripts/record.mjs`,
+then run it as `node record.mjs`.
+
 ```sh
 # once, where you'll run it from (not saved in the project's package.json)
 npm install --no-save playwright @ffmpeg-installer/ffmpeg
