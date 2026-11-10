@@ -121,7 +121,8 @@ const ffmpeg =
 // The page's clock: performance.now(), Date.now(), requestAnimationFrame,
 // setTimeout, and setInterval all read virtual time. Until recording, a pump
 // moves it with real time, so the game loads as usual; then each frame steps
-// it by hand. Web Audio and CSS animations keep real time.
+// it by hand, CSS animations and transitions with it (left to themselves,
+// they'd stay on their first frame). Web Audio keeps real time.
 const CLOCK = `(() => {
   const real = {
     now: performance.now.bind(performance),
@@ -186,9 +187,24 @@ const CLOCK = `(() => {
     real.setTimeout(pump, 16);
   };
   real.setTimeout(pump, 16);
+  // Running CSS animations and transitions, held and moved on by hand; one
+  // the game paused itself stays as it is.
+  const held = new WeakSet();
+  const stepAnimations = (ms) => {
+    for (const a of document.getAnimations()) {
+      if (a.playState === "running") {
+        a.pause();
+        held.add(a);
+      }
+      if (held.has(a) && a.playState === "paused") {
+        a.currentTime = (a.currentTime ?? 0) + ms;
+      }
+    }
+  };
   window.__recordStep = (ms) => {
     pumping = false;
     step(ms);
+    stepAnimations(ms);
   };
   // A game that calls initStart() says it's ready with initComplete(), once
   // its first frame is drawn: wait for that, if it starts.

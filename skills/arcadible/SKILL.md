@@ -136,4 +136,5 @@ export async function frame({ page, frame, fps }) {
 Keep drive modules and recordings outside the project unless the user wants them, then run
 `arc validate`, which checks each file's size, shape, and length, and look at a few frames of each
 video before calling it done. The clock covers `requestAnimationFrame`, `performance.now()`,
-`Date.now()`, and timers; a game timed by Web Audio's clock or CSS animations keeps real time.
+`Date.now()`, timers, and CSS animations and transitions; a game timed by Web Audio's clock keeps
+real time.
