@@ -5,8 +5,8 @@ description: >
   Making, publishing, and updating games on Arcadible with the arc CLI. Use when a project has an
   arcadible.toml, when asked to put a game on Arcadible or bring an existing web game there, when
   fixing an arc validate or arc deploy error, when writing a game's store page (its README and the
-  art in .arcadible/), when adding the Arcadible SDK's loading screen or saves, or when recording a
-  game's screenshots and videos for its store page.
+  art in .arcadible/), when adding the Arcadible SDK's loading screen, saves, pausing, or players,
+  or when recording a game's screenshots and videos for its store page.
 ---
 
 # Make games for Arcadible
@@ -32,6 +32,8 @@ Markdown at its address plus `.md`, as linked below. Resolve a page's relative l
 | Change the game                          | [Best Practices](https://developer.arcadible.com/build/best-practices.md) and [Runtime Limitations](https://developer.arcadible.com/build/runtime-limitations.md)           |
 | Change how it starts                     | [Initialization](https://developer.arcadible.com/build/initialization.md)                                                                                                   |
 | Change how it saves                      | [Saves](https://developer.arcadible.com/build/saves.md), then [`arcadible.saves`](https://developer.arcadible.com/references/arcadible-sdk/saves.md)                        |
+| Change how it pauses                     | [Pausing](https://developer.arcadible.com/build/pausing.md)                                                                                                                 |
+| Show who's playing                       | [Players](https://developer.arcadible.com/build/players.md), then [`arcadible.players`](https://developer.arcadible.com/references/arcadible-sdk/players.md)                |
 | Change `arcadible.toml`                  | [Arcadible Manifest](https://developer.arcadible.com/references/arcadible-manifest.md)                                                                                      |
 | Change the store page                    | [Your Store Page](https://developer.arcadible.com/publish/store-page.md), [Screenshots](https://developer.arcadible.com/publish/screenshots.md), and [Arcadible Markdown](https://developer.arcadible.com/references/arcadible-markdown.md) |
 | Test it                                  | [Testing](https://developer.arcadible.com/build/testing.md)                                                                                                                 |
